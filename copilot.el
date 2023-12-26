@@ -689,7 +689,6 @@ Use TRANSFORM-FN to transform completion if provided."
     (setq copilot--opened-buffers (delete (current-buffer) copilot--opened-buffers))))
 
 
-;;;###autoload
 (defun copilot-complete ()
   "Complete at the current point."
   (interactive)
@@ -780,7 +779,6 @@ Use this for custom bindings in `copilot-mode'.")
   ;; Send the close event for the active buffer since activating the mode will open it again.
   (copilot--on-doc-close))
 
-;;;###autoload
 (define-minor-mode copilot-mode
   "Minor mode for Copilot."
   :init-value nil
@@ -800,7 +798,6 @@ Use this for custom bindings in `copilot-mode'.")
         (cdr copilot--real-posn)))))
 
 
-;;;###autoload
 (define-global-minor-mode global-copilot-mode
   copilot-mode copilot-turn-on-unless-buffer-read-only)
 
